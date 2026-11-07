@@ -1,287 +1,253 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#10182b">
 <title>Play Boy Job Real Meeting</title>
 
 <style>
-:root {
-  --bg:#10182b;
-  --panel:#1b263d;
-  --gold:#ffd629;
-  --green:#18c45b;
-  --muted:#aeb8ca;
-  --white:#f4f6fb;
-}
-
 * {
-  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html {
-  scroll-behavior:smooth;
+:root {
+  --bg: #10182b;
+  --panel: #1b263d;
+  --gold: #ffd629;
+  --green: #18c45b;
+  --white: #f4f6fb;
+  --muted: #aeb8ca;
 }
 
 body {
-  margin:0;
-  padding:24px 14px 32px;
-  background:radial-gradient(ellipse at top,#20283a 0,var(--bg) 48%);
-  color:var(--white);
-  font-family:Arial,Helvetica,sans-serif;
-  line-height:1.5;
+  background: radial-gradient(ellipse at top,#20283a,var(--bg) 55%);
+  color: var(--white);
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  padding: 22px 14px 30px;
 }
 
 .page {
-  width:100%;
-  max-width:440px;
-  margin:0 auto;
+  max-width: 440px;
+  width: 100%;
+  margin: auto;
 }
 
 .hero {
-  text-align:center;
-  padding:8px 4px 0;
+  text-align: center;
+  padding-top: 5px;
 }
 
 .logo {
-  width:112px;
-  height:112px;
-  margin:0 auto 14px;
-  border:3px solid var(--gold);
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  padding:9px;
-  color:var(--gold);
-  font-size:12px;
-  font-weight:800;
-  text-align:center;
-  letter-spacing:1px;
-  box-shadow:0 0 18px rgba(255,214,41,.24);
-  background:linear-gradient(145deg,#263047,#0c1424);
+  width: 112px;
+  height: 112px;
+  object-fit: cover;
+  border: 3px solid var(--gold);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255,214,41,.35);
+  margin: 0 auto 15px;
+  display: block;
 }
 
 h1 {
-  margin:8px 0 6px;
-  color:var(--gold);
-  font-size:clamp(22px,6vw,27px);
-  line-height:1.2;
-  font-weight:900;
-  text-transform:uppercase;
+  color: var(--gold);
+  font-size: 25px;
+  line-height: 1.25;
+  font-weight: 900;
+  margin-bottom: 8px;
 }
 
 .tagline {
-  margin:8px 0;
-  font-size:15px;
-  font-weight:700;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 8px 0;
 }
 
 .intro {
-  color:var(--muted);
-  font-size:13px;
-  margin:10px 0 18px;
+  font-size: 13px;
+  color: var(--muted);
+  margin: 10px 0 18px;
 }
 
 .join {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:100%;
-  min-height:54px;
-  padding:14px 18px;
-  border-radius:12px;
-  background:var(--green);
-  color:#061b10;
-  text-decoration:none;
-  font-weight:900;
-  font-size:16px;
-  box-shadow:0 7px 20px rgba(24,196,91,.17);
-  transition:transform .15s ease,filter .15s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 53px;
+  background: var(--green);
+  color: #061b10;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 900;
+  border-radius: 12px;
+  margin: 14px 0;
+  box-shadow: 0 7px 20px rgba(24,196,91,.18);
+  transition: .2s;
 }
 
 .join:active {
-  transform:scale(.985);
-}
-
-.join:hover {
-  filter:brightness(1.06);
+  transform: scale(.98);
 }
 
 .trust {
-  margin-top:12px;
-  padding:13px 10px;
-  border-radius:12px;
-  background:#142f3a;
-  border:1px solid rgba(76,190,157,.12);
-  color:#e1e9ee;
-  font-size:13px;
+  background: #142f3a;
+  padding: 13px;
+  border-radius: 12px;
+  font-size: 13px;
+  margin-top: 12px;
+  text-align: center;
 }
 
 .stats {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:8px;
-  margin:14px 0 30px;
-  padding:14px 8px;
-  border-radius:13px;
-  background:var(--panel);
-  border:1px solid rgba(255,255,255,.035);
-  text-align:center;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 8px;
+  background: var(--panel);
+  padding: 14px 7px;
+  border-radius: 13px;
+  margin: 15px 0 28px;
+  text-align: center;
 }
 
 .stats strong {
-  display:block;
-  color:var(--gold);
-  font-size:19px;
+  display: block;
+  color: var(--gold);
+  font-size: 19px;
 }
 
 .stats span {
-  display:block;
-  color:var(--muted);
-  font-size:9px;
-  letter-spacing:.7px;
+  color: var(--muted);
+  font-size: 9px;
 }
 
 h2 {
-  margin:27px 0 14px;
-  color:var(--gold);
-  text-align:center;
-  font-size:13px;
-  letter-spacing:2px;
-  text-transform:uppercase;
+  text-align: center;
+  color: var(--gold);
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin: 28px 0 14px;
+  text-transform: uppercase;
 }
 
 .steps {
-  display:grid;
-  gap:9px;
+  display: grid;
+  gap: 9px;
 }
 
 .step {
-  display:flex;
-  align-items:center;
-  gap:13px;
-  padding:12px;
-  background:var(--panel);
-  border:1px solid rgba(255,255,255,.035);
-  border-radius:13px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  background: var(--panel);
+  padding: 12px;
+  border-radius: 13px;
 }
 
 .number {
-  flex:0 0 34px;
-  width:34px;
-  height:34px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  background:var(--green);
-  color:#062012;
-  font-weight:900;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  background: var(--green);
+  color: #061b10;
+  font-weight: 900;
+  border-radius: 50%;
 }
 
 .step strong {
-  display:block;
-  font-size:13px;
+  font-size: 13px;
+  display: block;
 }
 
 .step small {
-  display:block;
-  color:var(--muted);
-  font-size:11px;
-  margin-top:2px;
+  color: var(--muted);
+  font-size: 11px;
 }
 
 .benefits {
-  list-style:none;
-  margin:0;
-  padding:0;
+  list-style: none;
 }
 
 .benefits li {
-  margin:10px 0;
-  font-size:13px;
+  font-size: 13px;
+  margin: 11px 0;
 }
 
 .benefits b {
-  color:var(--gold);
+  color: var(--gold);
 }
 
 .faq {
-  display:grid;
-  gap:9px;
+  display: grid;
+  gap: 9px;
 }
 
 details {
-  padding:13px;
-  background:var(--panel);
-  border-radius:12px;
-  border:1px solid rgba(255,255,255,.035);
+  background: var(--panel);
+  padding: 13px;
+  border-radius: 12px;
 }
 
 summary {
-  cursor:pointer;
-  font-weight:800;
-  font-size:13px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
 }
 
 details p {
-  margin:8px 0 0;
-  color:var(--muted);
-  font-size:12px;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 8px;
 }
 
 .notice {
-  margin:20px 0 16px;
-  text-align:center;
-  color:var(--gold);
-  font-weight:800;
-  font-size:13px;
+  color: var(--gold);
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 22px 0 15px;
 }
 
 footer {
-  margin-top:20px;
-  text-align:center;
-  color:var(--muted);
-  font-size:10px;
-  line-height:1.6;
+  text-align: center;
+  color: var(--muted);
+  font-size: 10px;
+  margin-top: 20px;
+  line-height: 1.7;
 }
 
 footer a {
-  color:#dce5f5;
+  color: white;
 }
 
-@media (min-width:600px) {
+@media(min-width:600px) {
   body {
-    padding-top:38px;
-  }
-
-  .page {
-    max-width:460px;
+    padding-top: 38px;
   }
 }
 
-@media (prefers-reduced-motion:reduce) {
-  html {
-    scroll-behavior:auto;
-  }
-
+@media(prefers-reduced-motion:reduce) {
   *,*::before,*::after {
-    transition:none !important;
+    transition: none !important;
   }
 }
 </style>
 </head>
 
 <body>
+
 <main class="page">
 
 <header class="hero">
 
-<div class="logo">
-PLAY BOY<br>
-JOB<br>
-REAL MEETING
-</div>
+<img src="logo.jpg"
+     alt="Play Boy Job Real Meeting Logo"
+     class="logo">
 
 <h1>PLAY BOY JOB REAL MEETING</h1>
 
@@ -290,7 +256,7 @@ REAL MEETING
 </p>
 
 <p class="intro">
-Channel updates • New member announcements • Important alerts
+Channel Updates • New Member Announcements • Important Alerts
 </p>
 
 <a class="join"
@@ -301,8 +267,8 @@ rel="noopener noreferrer">
 </a>
 
 <div class="trust">
-✓ Channel announcements<br>
-✓ Updates posted by channel admins
+✓ Channel Announcements<br>
+✓ Updates Posted by Channel Admins
 </div>
 
 </header>
@@ -328,7 +294,7 @@ rel="noopener noreferrer">
 
 <section>
 
-<h2>How It Works</h2>
+<h2>HOW IT WORKS</h2>
 
 <div class="steps">
 
@@ -343,7 +309,7 @@ rel="noopener noreferrer">
 <div class="step">
 <span class="number">2</span>
 <div>
-<strong>Read Channel Updates</strong>
+<strong>Get Channel Updates</strong>
 <small>Check the information shared by channel admins.</small>
 </div>
 </div>
@@ -351,16 +317,16 @@ rel="noopener noreferrer">
 <div class="step">
 <span class="number">3</span>
 <div>
-<strong>Check Details Carefully</strong>
-<small>Verify any offer or meeting details independently.</small>
+<strong>Follow Instructions</strong>
+<small>Check all details carefully before proceeding.</small>
 </div>
 </div>
 
 <div class="step">
 <span class="number">4</span>
 <div>
-<strong>Stay Updated</strong>
-<small>Turn on notifications if you want new post alerts.</small>
+<strong>Stay Updated Daily</strong>
+<small>Turn on notifications for new post alerts.</small>
 </div>
 </div>
 
@@ -369,14 +335,20 @@ rel="noopener noreferrer">
 
 <section>
 
-<h2>What You Get</h2>
+<h2>WHAT YOU GET</h2>
 
 <ul class="benefits">
+
 <li>✓ <b>Channel Updates</b> — New posts and announcements</li>
-<li>✓ <b>Daily Posts</b> — Updates when published by admins</li>
-<li>✓ <b>Quick Alerts</b> — See new channel notifications</li>
-<li>✓ <b>Mobile Friendly</b> — Works on phones and desktop</li>
-<li>✓ <b>Join on Telegram</b> — Open the channel using the invite link</li>
+
+<li>✓ <b>Daily Posts</b> — Updates when published</li>
+
+<li>✓ <b>Quick Notifications</b> — See new channel alerts</li>
+
+<li>✓ <b>Mobile Friendly</b> — Access from any device</li>
+
+<li>✓ <b>Easy Joining</b> — Join directly through Telegram</li>
+
 </ul>
 
 <a class="join"
@@ -390,28 +362,36 @@ rel="noopener noreferrer">
 
 <section>
 
-<h2>Common Questions</h2>
+<h2>COMMON QUESTIONS</h2>
 
 <div class="faq">
 
 <details open>
 <summary>How often are updates posted?</summary>
-<p>Updates are posted when available. Turn on Telegram notifications if you want to see new posts.</p>
+<p>
+Updates are posted when available. Turn on Telegram notifications to see new posts.
+</p>
 </details>
 
 <details>
 <summary>Are all details verified?</summary>
-<p>Check information independently before acting on it. A landing page cannot guarantee the accuracy of third-party posts.</p>
+<p>
+Please verify information independently before acting on any third-party post.
+</p>
 </details>
 
 <details>
 <summary>How do I join?</summary>
-<p>Tap any green Join Telegram button and follow Telegram's on-screen instructions.</p>
+<p>
+Tap any green Join Telegram button and follow Telegram's instructions.
+</p>
 </details>
 
 <details>
 <summary>Do I need to share personal information?</summary>
-<p>Never share your OTP, password, bank details, or identity documents with strangers. Be cautious of anyone asking for advance payment.</p>
+<p>
+Never share your OTP, password, banking details or identity documents with strangers.
+</p>
 </details>
 
 </div>
@@ -429,14 +409,22 @@ rel="noopener noreferrer">
 </a>
 
 <footer>
-Be careful with offers and meeting requests. Verify people and details independently.
-Never send money in advance or share OTPs, passwords, or banking information.
+
+Verify all offers and meeting details independently.
+
+Never send advance money or share OTPs, passwords or banking information.
+
 <br><br>
+
 <a href="https://telegram.org/"
 target="_blank"
-rel="noopener noreferrer">Telegram</a>
+rel="noopener noreferrer">
+Telegram
+</a>
+
 </footer>
 
 </main>
+
 </body>
 </html>
